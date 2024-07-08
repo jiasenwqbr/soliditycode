@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "eat",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Demo.sol": "AnimalEat"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Demo.sol": {
+			"keccak256": "0xdf20f1d51b17e201d1d13a58220e88c2a422e976ef18c78eec0f1e9405b72cc0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1dd6571d690f412d1cc0ae706ea9986f7eb67ea8955df3bb80946a3a1227b881",
+				"dweb:/ipfs/QmSkdLC66pb1avULSmHaKYaky88qLsBbtwXC1LyBQZpmox"
+			]
+		}
+	},
+	"version": 1
+}

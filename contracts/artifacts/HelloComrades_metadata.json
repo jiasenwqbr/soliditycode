@@ -1,0 +1,385 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_Leader",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "MyError",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "Step",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "comfort",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "comfortRes",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destruct",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBanlance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "hello",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "helloRes",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "leader",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "step",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Anbang",
+			"custom:experimental": "这是",
+			"details": "本章主要内容的实战练习",
+			"errors": {
+				"MyError(string)": [
+					{
+						"details": "用于所有未知错误 This is a message des info.需要上方空一行，才可以显示出来"
+					}
+				]
+			},
+			"events": {
+				"Log(string,address,uint256,bytes)": {
+					"details": "只要发生金额修改，都需要抛出此事件",
+					"params": {
+						"data": ": 当前调用的data内容",
+						"from": ": 当前地址",
+						"tag": ": 标记内容",
+						"value": ": 当前发送金额"
+					}
+				},
+				"Step(uint8)": {
+					"details": "只要发生 step 修改，都需要抛出此事件",
+					"params": {
+						"": "当前修改的最新 step"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"comfort(string)": {
+					"details": "只能在 step 为 2 时调用，只能领导调用，并且只能说\"同志们辛苦了\",还需给钱",
+					"params": {
+						"content": ": 当前领导说的内容"
+					},
+					"returns": {
+						"_0": "当前调用的状态，true 代表成功"
+					}
+				},
+				"comfortRes(string)": {
+					"details": "只能在 step 为 3 时调用，只能非领导调用，并且只能说\"为人民服务\"",
+					"params": {
+						"content": ": 当前同志们说的内容"
+					},
+					"returns": {
+						"_0": "当前调用的状态，true 代表成功"
+					}
+				},
+				"constructor": {
+					"details": "用于领导地址的指定，后续不可修改"
+				},
+				"destruct()": {
+					"details": "只能在 step 为 4 时调用，只能领导调用",
+					"returns": {
+						"_0": "当前调用的状态，true 代表成功"
+					}
+				},
+				"getBanlance()": {
+					"details": "一个获取当前合约金额的辅助函数",
+					"returns": {
+						"_0": "当前合约的余额"
+					}
+				},
+				"hello(string)": {
+					"details": "只能在 step 为 0 时调用，只能领导调用，并且只能说\"同志们好\"",
+					"params": {
+						"content": ": 当前领导说的内容"
+					},
+					"returns": {
+						"_0": "当前调用的状态，true 代表成功"
+					}
+				},
+				"helloRes(string)": {
+					"details": "只能在 step 为 1 时调用，只能非领导调用，并且只能说\"领导好\"",
+					"params": {
+						"content": ": 当前同志们说的内容"
+					},
+					"returns": {
+						"_0": "当前调用的状态，true 代表成功"
+					}
+				}
+			},
+			"stateVariables": {
+				"leader": {
+					"details": "不可变量，需要在构造函数内指定，以后就不能修改了",
+					"return": "当前领导的地址",
+					"returns": {
+						"_0": "当前领导的地址"
+					}
+				},
+				"step": {
+					"details": "0:等待领导说\"同志们好\"，1:等待同志们说\"领导好\"，2:等待领导说\"同志们辛苦了\"3:等待同志们说\"为人民服务\"4:等待销毁。",
+					"return": "当前进度",
+					"returns": {
+						"_0": "当前进度"
+					}
+				}
+			},
+			"title": "一个模拟同志们好的简单演示",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"MyError(string)": [
+					{
+						"notice": "自定义的错误，这种注释内容会在错误时显示出来"
+					}
+				]
+			},
+			"events": {
+				"Log(string,address,uint256,bytes)": {
+					"notice": "用于对当前合约的金额变动通知"
+				},
+				"Step(uint8)": {
+					"notice": "用于对当前 step 被修改时的信息通知"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"comfort(string)": {
+					"notice": "用于领导说\"同志们辛苦了\""
+				},
+				"comfortRes(string)": {
+					"notice": "用于同志们说\"为人民服务\""
+				},
+				"destruct()": {
+					"notice": "用于领导对"
+				},
+				"getBanlance()": {
+					"notice": "用于获取当前合约内的余额"
+				},
+				"hello(string)": {
+					"notice": "用于领导说\"同志们好\""
+				},
+				"helloRes(string)": {
+					"notice": "用于同志们说\"领导好\""
+				},
+				"leader()": {
+					"notice": "用于标记领导地址"
+				},
+				"step()": {
+					"notice": "用于标记当前进度"
+				}
+			},
+			"notice": "您只能将此合约用于最基本的模拟演示",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HelloComrades.sol": "HelloComrades"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HelloComrades.sol": {
+			"keccak256": "0x5fb571152b6d76f0a86d8418165f7eef13a3890412b1b3b6b6bf54a35f843ef6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a1b50b380a773143a1d1dbc497d45a2fd6f6a0c7d4b242d1936446a906279e6a",
+				"dweb:/ipfs/QmS6vyeDmxTxJMoaCdNygjDf6asHN3wTGoUP2AExVhbmp6"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "f",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DanglingReference.sol": "DanglingReference"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DanglingReference.sol": {
+			"keccak256": "0xfa4ce3fed7e19da983719a0b7fc4fb0e98ae2f6df305e2b67deb6616b3599edc",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a82d7c348737b82810c862d9d58cbb3d76f8ac48878a8512f94c7fb87e1b0b8f",
+				"dweb:/ipfs/QmT2F2UPnbup2LAymrpbkBR7hit711yK1vHjbY5tydUHnV"
+			]
+		}
+	},
+	"version": 1
+}
